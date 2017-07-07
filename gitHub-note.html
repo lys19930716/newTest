@@ -1,0 +1,28 @@
+gitHub平台的使用
+	注册登录
+	点击右上角 + 选择 new Repository创建一个新的仓库
+	在 repository name 中填写仓库名字
+	create
+
+	关联本地仓库与远程仓库
+	git remote add origin https://github.com/lys19930716/test1.git
+			origin是别名,指代后面的地址
+	将本地仓库内容推送/上传/提交到远程仓库
+	git push -u origin master
+	-u 第一次上传需要添加,之后上传就不需要-u了
+	注意: 使用git push 上传时,首先要检查本地仓库是否提交
+
+	SSH加密: 公钥 , 密钥 
+	查询是否有密钥: ls -a ~/.ssh
+	如果出现 id_rsa,rsa.pub这两个文件,说明本机有密钥,直接跟GitHub绑定
+	如果没有,需要生成密钥: ssh-keygen -t rsa -C "邮箱地址"
+	一路回车
+
+	出现id_rsa,rsa.pub说明生成密钥成功
+
+	点击github头像--选择settings--sSSH and GPG keys--ssh keys
+	
+	title填标题 
+	key中填写 id_rsa.pub中的内容(将i内容复制进去)
+
+	git remote add origin git@github.com:lys19930716/sshTest.git
